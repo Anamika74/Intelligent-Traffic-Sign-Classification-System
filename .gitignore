@@ -1,7 +1,16 @@
-# Ignore the large local datasets
-Datasets/
-Models/
-
-# Ignore python cache and check-points
+# environments and caches
+.venv/
 __pycache__/
-.ipynb_checkpoints/
+.pytest_cache/
+
+# datasets are large and come from Kaggle
+Datasets/
+
+# generated outputs
+results/
+temp_input.jpg
+gradcam_output.png
+
+# model weights: keep only the final model in git (about 43 MB)
+models/*.pth
+!models/native_indian_v2.pth
