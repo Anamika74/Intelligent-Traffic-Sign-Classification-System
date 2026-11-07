@@ -229,4 +229,4 @@ with tab_about:
         "- Signs outside the training classes will still receive a guess, which is why "
         "the confidence check matters."
     )
-    st.caption("Built by Anamika Sharma · [GitHub](https://github.com/Anamika74/traffic-sign-recognition)")
+    st.caption("Built by Anamika Sharma · [GitHub](https://github.com/Anamika74/Intelligent-Traffic-Sign-Classification-System)")

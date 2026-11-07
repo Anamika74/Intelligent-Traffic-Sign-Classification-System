@@ -2,13 +2,13 @@
 
 A ResNet18 classifier for **85 classes of Indian road signs**, with Grad-CAM explanations, confidence-based rejection of unreliable inputs, and an interactive Streamlit app. The project also measures, with a fair protocol, how well a German-trained model transfers to Indian signs.
 
-**Live demo:** _add your Hugging Face Spaces link here after deployment_
+**Live demo:** [https://github.com/Anamika74/Intelligent-Traffic-Sign-Classification-System]
 
 ![App screenshot](docs/app_screenshot.png)
 
 ## Results
 
-All numbers below come from `notebooks/kaggle_retrain_and_evaluate.ipynb` (3 random seeds) and `scripts/evaluate_model.py`.
+All numbers below come from `Notebooks/kaggle_retrain_and_evaluate.ipynb` (3 random seeds) and `scripts/evaluate_model.py`.
 
 ### Final model
 
@@ -89,12 +89,12 @@ Weakest classes on the test set (images in brackets): `COMPULSARY_AHEAD_OR_TURN_
 ## Run it locally
 
 ```bash
-git clone https://github.com/Anamika74/<your-repo-name>.git
-cd <your-repo-name>
-pip install -r requirements.txt
+git clone https://github.com/Anamika74/Intelligent-Traffic-Sign-Classification-System.git
+cd Intelligent-Traffic-Sign-Classification-System
+pip install -r requirements.txt   
 ```
 
-Model weights are not stored in git. Download `native_indian_v2.pth` (and optionally the two older checkpoints) from _add your Hugging Face model or release link here_ and place them in `models/`. Keep `classes_indian.json` in the project root.
+The final model, `models/native_indian_v2.pth` (about 43 MB), is included in the repository, and `classes_indian.json` holds the class names in training order. The app lists only the models whose weight files are present in `models/`.
 
 ```bash
 streamlit run app.py          # the app
@@ -116,7 +116,7 @@ src/
   voice.py              browser speech alerts with cooldown
   metrics.py, report.py evaluation metrics and plots
 scripts/                quick_check.py, evaluate_model.py
-notebooks/              kaggle_retrain_and_evaluate.ipynb (training and all experiments)
+Notebooks/              kaggle_retrain_and_evaluate.ipynb (training and all experiments)
 tests/                  smoke tests and metric tests
 docs/                   charts and tables used in this README
 classes_indian.json     class names in the exact order used for training
